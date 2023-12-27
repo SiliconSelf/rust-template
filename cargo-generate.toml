@@ -1,0 +1,24 @@
+[template]
+
+# Examples: https://docs.rs/semver/latest/semver/enum.Op.html
+cargo_generate_version = ">=0.12"
+
+ignore = [
+    ".git",
+    "README.md",
+]
+
+[hooks]
+post = [
+    "post.rhai",
+]
+
+[placeholders.short_description]
+type = "string"
+prompt = "Short description"
+
+[conditional.'crate_type == "lib"']
+ignore = [ "src/main.rs" ]
+
+[conditional.'crate_type == "bin"']
+ignore = [ "src/lib.rs" ]
