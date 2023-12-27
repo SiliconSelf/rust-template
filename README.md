@@ -7,7 +7,7 @@ This is my personal template for creating new Rust projects. Most of this, espec
 To use:
 1. Install [cargo-generate](https://cargo-generate.github.io/cargo-generate/installation.html)
 2. Add this to `$CARGO_HOME/cargo-generate.toml`:
-```
+```toml
 [favorites.siliconself]
 git = "https://github.com/SiliconSelf/rust-template"
 branch = "main"
