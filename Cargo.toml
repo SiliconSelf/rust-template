@@ -6,7 +6,7 @@ edition = "2021"
 {%- if use_default_licensing %}
 license = "MIT OR Apache-2.0"{% endif %}
 
-{%- if profile == "release" %}
+{%- if crate_type == "bin" %}
 [profile.release]
 strip = true
 lto = true
